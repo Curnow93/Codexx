@@ -1,0 +1,49 @@
+*{
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+
+$facebookblue: #4862A3;
+
+h1, h2, h3, h4, h5, h6, p, a {
+font-family: serif;
+	&:hover{
+		color: $facebookblue;
+		}
+}
+
+body {
+	width: 960px;
+	margin: 0px auto;
+	background-color: grey;
+}
+
+img{
+width: 150px;
+height: 150px;
+border-radius: 15px 10px 15px 10px;
+box-shadow: 2px 2px 2px #000;
+}
+
+.profilepic{
+width: 200px;
+height: 200px;
+position: relative;
+	&:hover{
+		border: 2px dashed $facebookblue;
+	}
+}
+
+header{
+margin: 0px auto;
+	ul li{
+		float: left;
+		display: inline;
+		margin: 0 4px;
+		:after{
+			clear: both;
+		}
+	}
+}
+

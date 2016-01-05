@@ -6,12 +6,11 @@
 
 h1, h2, h3, h4, h5, h6{
 font-family: serif;
-color: hsla(180, 100%, 50%);
+color: black;
 }
 
   h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, p:hover, a:hover {
-  color: hsla(240, 50%, 50%, 0.1);
-	text-shadow: 5px 1px 1px #000;
+  color: hsla(180, 50%, 50%, 1);
 }
 
 body {
@@ -50,7 +49,7 @@ border: 2px dashed #4862A3;
 
 header {
 margin: 0 auto;
-background: radial-gradient(blue, aqua);
+background-color: #FCFFFC;
 }
 
 header ul{
@@ -83,7 +82,7 @@ border: 2px solid black;
 }
 
 main{
-background: linear-gradient(0deg, #C2C2FF, white);
+background-color: #BDBFBD;
 }
 
 .intro{
@@ -136,7 +135,7 @@ float: right;
 }
 
 footer{
-background-color: grey;
+background-color: #7E7F7E;
 color: white;
 text-align: center;
 padding: 1.5625%;
