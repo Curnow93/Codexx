@@ -4,24 +4,21 @@
   -webkit-box-sizing: border-box; 
 }
 
-@font-face {
-font-family: 'Myriad Pro Regular';
-font-style: normal;
-font-weight: normal;
-src: url('MYRIADPRO-REGULAR.woff');
+h1, h2, h3, h4, h5, h6{
+font-family: serif;
+color: hsla(180, 100%, 50%);
 }
 
   h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, p:hover, a:hover {
-  color: hsla(240, 50%, 50%, 0.9);
-	text-shadow: 2px 2px 1px #000; 
-	transform: translate(20px, 30px);
+  color: hsla(240, 50%, 50%, 0.1);
+	text-shadow: 5px 1px 1px #000;
 }
 
 body {
 width: 70.2781845%;
 margin: 0 auto;
 background: url(../img/background-3.jpg) repeat right top;
-font: 14px/16px arial, sans-serif;
+font: 14px/16px sans, arial;
 text-align: center;
 border: 2px solid white;
 }
