@@ -1,81 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="site">
 	<head>
 		<meta charset="UTF-8">
-		<link href="../css/style2.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
 		<!--<link href="../css/style2.css" rel="stylesheet" />-->
 		<script src="../js/jquery-1.12.0.js"></script>
 		<!--<script src="../js/angular.min.js"></script>-->		
 		<script type="text/javascript" src="../js/script3.js"></script>
 	</head>
-	<body>
+	<body ng-controller="SiteController as siteCtrl">
 	<header class="site-header">
-		<nav class="site-nav">
+		<nav>
 			<ul class="menu">
 				<li><a href="index.html">Portfolio</a></li>
 				<li><a href="aboutme.html">About Me</a></li>
 				<li class="git github"><a href="https://github.com/Curnow93">Github</a></li>
 				<li><a href="https://uk.linkedin.com/in/steven-curnow-64610769">LinkedIn</a></li>
+				<li><a href="http://www.webdesignerforum.co.uk/user/60756-nulldrone/">WDF</a></li>
 			</ul>
+
 		</nav>
 	</header>
 	<main>
 		<div class="img-container profilepic-container">
-			<img class="profilepic img-small" src="../img/steven.jpg" />
+			<img class="profilepic" src="../img/steven.jpg" />
 		</div>
 		<div class="intro">
 		<h1>Codexx</h1>
 		<h2>Steven Curnow</h2>
 		<p>Front End Web Development</p>
+		<input type="text"></input>
+		<input type="submit"></input>
+		</form>
+		<button> Add to Cart </button>
 		<h2>Current Projects</h2>
 		<p>Here is a list of my current projects.</p>
 		</div>
-	<section class="portfolio">
-		<figure class="img-container">
-			<img src="../img/codexx.png" class="img-small" rel="image" alt="codexx"/>
+	<section class="portfolio" ng-controller="PanelController as panel" ng-init="tab = 4">
+		<figure class="img-container" ng-hide="panel.isSelected(1)" ng-click="panel.selectTab">
+			<img src="../img/codexx.png" rel="image" alt="codexx" ng-class="{.figcaption-black:tab === 1}" />
 			<figcaption><h2>Codexx</h2></figcaption>
 			<time></time>
 		</figure>
-		<figure class="img-container">
-			<img src="../img/brain.jpg" rel="image" class="img-small"alt="psychcentral">
+		<figure class="img-container" ng-click="tab = 2" ng-hide="panel.isSelected(2)">
+			<img src="../img/brady.jpg" rel="image" alt="psychcentral">
 			<figcaption><h2>Psych Central</h2></figcaption>
 			<time></time>
 		</figure>
-		<figure class="img img-container">
+		<figure class="img-container" ng-click="tab = 3" ng-hide="panel.isSelected(3)">
 			<a href="http://www.meritocracynow.net"><img class="imgmerit" src="../img/MeritocracyHorizontalBannerShort.png" rel="image" alt="meritocracynow"></a>
 			<figcaption><h2>Meritocracy Now!</h2></figcaption>
 			<time></time>
 		</figure>
-		<figure class="img-container">
-			<img src="../img/brain.jpg" class="img-small" rel="image" alt="psychcentral">
+		<figure class="img-container" ng-click="tab = 4" ng-hide="panel.isSelected(4)">
+			<img src="../img/brady.jpg" rel="image" alt="psychcentral">
 			<figcaption><h2>Psych Central</h2></figcaption>
 			<time></time>
 		</figure>
-		<figure class="img-container">
-			<img src="../img/brain.jpg" class="img-small" rel="image" alt="psychcentral">
+		<figure class="img-container" ng-click="tab = 5" ng-hide="panel.isSelected(5)">
+			<img src="../img/brady.jpg" rel="image" alt="psychcentral">
 			<figcaption><h2>Psych Central</h2></figcaption>
 			<time></time>
 		</figure>
-		<figure class="img-container">
-			<img src="../img/brain.jpg" class="img-small" rel="image" alt="psychcentral">
+		<figure class="img-container" ng-click="tab = 6" ng-hide="panel.isSelected(6)">
+			<img src="../img/brady.jpg" rel="image" alt="psychcentral">
 			<figcaption><h2>Psych Central</h2></figcaption>
 			<time></time>
 		</figure>
 	</section>
 	</main>
+	<product-title>hello</product-title>
 	<footer class="site-footer">
-		<div class="footerContainer">
-		<div class="contact">
-			<h3>Contact</h3>
-			<bold>curnow93@gmail.com</bold>
-		</div>
-		<form name="contactForm" class="contactForm footerContainer">
+		<form name="contactForm" ng-submit="siteCtrl.addReview()" novalidate>
 			<textarea required></textarea>
 			<label>By...</label>
 			<input type="email" required></input>
 			<input type="submit" value="submit" required></input>
 		</form>
-		</div>
+		<h3>Contact me:</h3>
+		<bold>07598651118</bold>
 	</footer>
 	</body>
 	

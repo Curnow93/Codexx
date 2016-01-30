@@ -1,0 +1,189 @@
+$header: #7E7E7F;
+$cbackground: #AB2CFF;
+$content: #FCFCFF;
+$footer: #505D7F;
+$background: #C9CACC;
+$bodywidth: 70.2781845%;
+$border1: 1px dashed red;
+$borderrad: 10px 30px;
+$bordergrey: 1px solid grey;
+$navspacer: 2px solid black;
+$bleft: border-left;
+$bright: border-right;
+$btop: border-top;
+$bbottom: border-bottom;
+
+@function fluidize($target, $context){
+	@return ($target / $context) * 100%;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+	//border: $border1;
+}
+
+@mixin box-sizing($x: border-box){
+	box-sizing: $x;
+	-moz-box-sizing: $x;
+	-webkit-box-sizing: $x;
+}
+
+body{
+background-color: $background;
+font: 16px/1.2em sans, serif;
+width: fluidize(960, 1366);
+margin: 0 auto;
+background-color: $background;
+text-align: center;
+border: $border1;
+font: 16px/1.2em serif, sans;
+}
+
+h1,h2,h3,h4,h5,h6,a,p{
+	&:hover{
+		color: $footer;
+	}
+}
+
+.img{
+	&-small{
+	width: 100%;
+	height: 100%;
+	}	
+	&-container{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	border: $bordergrey;
+	overflow: hidden;
+	border-radius: $borderrad;
+		&:hover{
+		border: 3px solid grey;
+		}
+	}
+	&merit{
+		width: 500px;			
+		height: 216px;
+	}
+}
+
+.profilepic-container{
+margin: 6.25% auto;
+}
+
+.site-header {
+	@if $header != undefined{
+	background-color: $header;
+	}@else {
+	background-color: $background;
+	}
+	ul{
+	margin: 0 auto;
+	width: 50%;
+		li {
+		float: left;
+		display: inline;
+		padding: 5px;
+		#{$bleft}: $navspacer;
+		#{$bright}: $navspacer;
+		background-color: $background;
+		position: relative;
+		&:hover{
+			background-color: #FFFFFF;
+			}	
+		}
+	&:after, &:before{
+		content:"";
+		display: table;
+		clear: both;
+	}
+	}
+}
+.site-nav{
+border: 4px solid $footer;
+}
+main{
+background-color: white;
+border: $bordergrey;
+}
+.intro{
+width: 50%;
+margin: 0 auto;
+#{$btop}: 4px solid grey;
+#{$bbottom}: 4px solid grey;
+background-color: $content;
+}
+
+.portfolio{
+	margin: 6% 0;
+	background-color: $content;
+}
+
+figure{
+display: inline-block;
+margin: 4.1666667% 4.1666667% 4.1666667%;
+opacity: 0.8;
+transition: 0.2s ease-in-out 0s;
+	&:hover{
+	opacity: 1;
+	}
+}
+
+figcaption{
+position: absolute;
+bottom: 0%;
+left: 0%;
+height: 20%;
+width: 100%;
+font: italic bold 11px/1.2em sans;
+text-align: center;
+color: black;
+background-color: white;
+	&:hover{
+	background-color: $background;
+	}
+}
+
+.site-footer{
+background-color: $footer;
+color: white;
+text-align: left;
+border: 4px solid grey;
+position: relative;
+padding: 5.208333334% 10.416666667%;
+	&:child{
+		width: 20%;
+		border: 10px solid grey;
+		overflow: hidden;
+	}
+}
+.contact{
+width: 20%;
+border: 2px solid grey;
+display: inline-block;
+margin: 0 18.750000012%;
+&Form{
+width: 20%;
+border: 2px solid grey;
+display: inline-block;
+border: 0 18.750000012%;
+}
+}
+
+.footerContainer{
+border: 2px solid grey;
+//@include box-sizing(padding-box);
+}
+
+//aboutme
+
+.centre{
+text-align: center;
+}
+
+.sidebar{
+@extend .footerContainer;
+}
+
