@@ -2,60 +2,81 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<link href="../css/style.css" rel="stylesheet" />
-		<!--<link href="../css/style2.css" rel="stylesheet" />-->
-		<script src="../js/script.js"></script>
+		<link href="../css/style2.css" rel="stylesheet" />
+		<link href="../css/mobile.css" rel="stylesheet" />
+		<script src="../js/jquery-1.12.0.js"></script>
+		<!--<script src="../js/angular.min.js"></script>-->		
+		<script type="text/javascript" src="../js/script3.js"></script>
 	</head>
 	<body>
-	<header>
-		<nav>
-			<ul>
+	<header class="site-header">
+		<nav class="site-nav">
+			
+			<ul class="menu">
 				<li><a href="index.html">Portfolio</a></li>
 				<li><a href="aboutme.html">About Me</a></li>
-				<li>Github</li>
-				<li>LinkedIn</li>
-				<li>WDF</li>
+				<li><a href="https://github.com/Curnow93">Github</a></li>
+				<li><a href="https://uk.linkedin.com/in/steven-curnow-64610769">LinkedIn</a></li>
 			</ul>
-
 		</nav>
 	</header>
 	<main>
-		<div class="img-container profilepic-container">
-			<img class="profilepic" src="../img/steven.jpg" />
+		<div class="img-container img-profile">
+			<img class="profilepic img-small" src="../img/steven.jpg" />
 		</div>
 		<div class="intro">
 		<h1>Codexx</h1>
 		<h2>Steven Curnow</h2>
 		<p>Front End Web Development</p>
-		</div>
 		<h2>Current Projects</h2>
 		<p>Here is a list of my current projects.</p>
-		<figure class="img-container">
-			<img src="../img/codexx.png" rel="image" alt="codexx">
+		</div>
+	<section class="portfolio">
+		<figure class="img-container img-portfolio">
+			<img src="../img/codexx.png" class="img-small" rel="image" alt="codexx"/>
 			<figcaption><h2>Codexx</h2></figcaption>
 			<time></time>
 		</figure>
-		<figure class="img-container">
-			<img src="../img/brady.jpg" rel="image" alt="psychopathcentral">
-			<figcaption><h2>Psychopath Central</h2></figcaption>
+		<figure class="img-container img-portfolio">
+			<img src="../img/brain.jpg" rel="image" class="img-small"alt="psychcentral">
+			<figcaption><h2>Psych Central</h2></figcaption>
 			<time></time>
 		</figure>
-		<figure class="img-container">
-			<a href="http://www.meritocracynow.net"><img class="imgmerit" src="../img/MeritocracyHorizontalBannerShort.png" rel="image" alt="meritocracynow"></a>
+		<figure class="img img-container img-portfolio">
+			<a href="http://www.meritocracynow.net"><img class="img-merit" src="../img/MeritocracyHorizontalBannerShort.png" rel="image" alt="meritocracynow"></a>
 			<figcaption><h2>Meritocracy Now!</h2></figcaption>
 			<time></time>
 		</figure>
-		<figure class="img-container">
-			<img></img>
-			<figcaption></figcaption>
+		<figure class="img-container img-portfolio">
+			<img src="../img/brain.jpg" class="img-small" rel="image" alt="psychcentral">
+			<figcaption><h2>Psych Central</h2></figcaption>
 			<time></time>
 		</figure>
-		
-		
+		<figure class="img-container img-portfolio">
+			<img src="../img/brain.jpg" class="img-small" rel="image" alt="psychcentral">
+			<figcaption><h2>Psych Central</h2></figcaption>
+			<time></time>
+		</figure>
+		<figure class="img-container img-portfolio">
+			<img src="../img/brain.jpg" class="img-small" rel="image" alt="psychcentral">
+			<figcaption><h2>Psych Central</h2></figcaption>
+			<time></time>
+		</figure>
+	</section>
 	</main>
-	<footer>
-		<h3>Contact me:</h3>
-		<bold>07598651118</bold>
+	<footer class="site-footer">
+		<div class="site-footer-container">
+		<div class="contact-details">
+			<h3>Contact</h3>
+			<bold>curnow93@gmail.com</bold>
+		</div>
+		<form name="contactForm" class="contact-form">
+			<textarea required></textarea>
+			<label>By...</label>
+			<input type="email" required></input>
+			<input type="submit" value="submit" required></input>
+		</form>
+		</div>
 	</footer>
 	</body>
 	
