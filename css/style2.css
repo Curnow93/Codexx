@@ -3,25 +3,93 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box; }
 
+@font-face {
+  font-family: 'myriadpro-regular';
+  src: url("../fonts/myriadpro-regular.otf") format("otf"); }
 body {
-  background-color: #C9CACC;
-  font: 16px/1.2em sans, serif;
+  background-image: url(../img/earth1.jpg);
+  font-family: "myriadpro-regular";
   width: 70.27818%;
   margin: 0 auto;
   background-color: #C9CACC;
   text-align: center;
-  border: 1px dashed red;
-  font: 16px/1.2em serif, sans; }
+  border: 1px solid grey;
+  font: 16px/1.2em comic-sans, sans; }
 
-h1:hover,
-h2:hover,
-h3:hover,
-h4:hover,
-h5:hover,
-h6:hover,
-a:hover,
-p:hover {
-  color: #505D7F; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+  font-family: monospace;
+  text-decoration: none; }
+
+.site-header {
+  height: 60px;
+  opacity: 0.9;
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+  /* IE6-9 */
+  background-color: #7E7E7F; }
+  .site-header-nav {
+    max-width: 50%;
+    margin: 0 auto;
+    height: 100%;
+    background: inherit;
+    background-color: #7E7E7F; }
+    .site-header-nav ul {
+      height: 100%;
+      margin: 0 auto;
+      width: auto; }
+      .site-header-nav ul li {
+        height: 100%;
+        width: 25%;
+        float: left;
+        display: inline;
+        padding: 20px 0px;
+        border-left: 1px solid black;
+        background: inherit;
+        position: relative; }
+        .site-header-nav ul li:last-child {
+          border-right: 1px solid black; }
+        .site-header-nav ul li a {
+          text-decoration: none;
+          color: black;
+          text-shadow: 0px 0px 80; }
+        .site-header-nav ul li:hover {
+          background-color: #FFFFFF; }
+      .site-header-nav ul:after, .site-header-nav ul:before {
+        content: "";
+        display: table;
+        clear: both; }
+.site-footer {
+  background-color: #505D7F;
+  opacity: 0.8;
+  color: white;
+  text-align: left;
+  border: 4px solid grey;
+  position: relative;
+  padding: 5.208333334% 10.416666667%; }
+  .site-footer:child {
+    width: 20%;
+    border: 10px solid grey;
+    overflow: hidden; }
+  .site-footer-container {
+    border: 2px solid grey; }
+  .site-footer:after {
+    content: " ";
+    display: table;
+    clear: both; }
 
 .img-small {
   width: 100%;
@@ -40,44 +108,6 @@ p:hover {
   height: 216px; }
 .img-profile {
   margin: 6.25% auto; }
-
-.site-header {
-  background-color: #7E7E7F; }
-  .site-header ul {
-    margin: 0 auto;
-    width: 100%;
-    border: 1px dashed red; }
-    .site-header ul li {
-      float: left;
-      display: inline;
-      padding: 5px;
-      border-left: 2px solid black;
-      border-right: 2px solid black;
-      background-color: #C9CACC;
-      position: relative; }
-      .site-header ul li:hover {
-        background-color: #FFFFFF; }
-    .site-header ul:after, .site-header ul:before {
-      content: "";
-      display: table;
-      clear: both; }
-.site-nav {
-  border: 4px solid #505D7F;
-  max-width: 50%;
-  margin: 0 auto; }
-.site-footer {
-  background-color: #505D7F;
-  color: white;
-  text-align: left;
-  border: 4px solid grey;
-  position: relative;
-  padding: 5.208333334% 10.416666667%; }
-  .site-footer:child {
-    width: 20%;
-    border: 10px solid grey;
-    overflow: hidden; }
-  .site-footer-container, .sidebar {
-    border: 2px solid grey; }
 
 main {
   background-color: white;
@@ -116,17 +146,36 @@ figcaption {
     background-color: #C9CACC; }
 
 .contact-details {
-  width: 30%;
-  height: inherit;
+  width: 50%;
+  height: 200px;
+  float: left;
+  padding: 20px;
+  opacity: 0.7;
+  color: white;
+  text-align: center;
+  padding: 50px;
   border: 2px solid grey;
-  display: inline-block;
-  margin: 0 18.750000012%; }
+  background-color: black; }
 .contact-form {
-  width: 30%;
-  height: inherit;
+  width: 50%;
+  height: 200px;
+  padding: 20px;
+  float: right;
+  opacity: 0.7;
+  color: black;
   border: 2px solid grey;
-  display: inline-block;
-  margin: 0 18.750000012%; }
+  background-color: white; }
+  .contact-form * {
+    margin: 15px; }
+  .contact-form textarea {
+    width: 200px;
+    height: 60%; }
+  .contact-form-email {
+    width: 200px; }
+.contact:after {
+  content: " ";
+  display: table;
+  clear: both; }
 
 .centre {
   text-align: center; }
