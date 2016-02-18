@@ -4,12 +4,28 @@
     width: 100%; }
 
   .site-header {
-    width: 100%; }
-    .site-header ul {
-      width: 80%;
-      border: 2px dashed blue; }
-      .site-header ul li {
+    width: auto; }
+    .site-header-nav {
+      width: 100%; }
+      .site-header-nav ul {
         width: 100%; }
+        .site-header-nav ul li {
+          width: 25%;
+          margin: 0 auto; }
+  .site-footer {
+    width: 100%; }
+    .site-footer-container {
+      width: 100%;
+      padding: 0px; }
+      .site-footer-container .contact-details {
+        width: 100%; }
+      .site-footer-container .contact-form {
+        width: 100%; }
+        .site-footer-container .contact-form textarea {
+          width: 90%;
+          height: 40%; }
+        .site-footer-container .contact-form input {
+          width: 90%; }
 
   .intro {
     width: 100%; }

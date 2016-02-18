@@ -36,23 +36,23 @@ var parkRides = [["Wizard Coaster", 10], ["Wizzy Spinner", 20], ["Dirty Wizard",
 var wantsRide = "Wizzy Spinner";
 
 function buildTicket(allRides, fastRides, pick){
-if (fastRides[0] == pick){
-	var passengerNumber = 0;
-	var fastTicket = fastRides.shift();
-	return function(name){
-		passengerNumber++;
-		console.log("Your fast pass ticket to " + fastTicket + " " + name +"!.\nYou are 			passenger #" + passengerNumber);
-	}
-}
-else{
-	for(var i = 0; i < allRides.length; i++){
-		if(allRides[i][0] == pick){
-			return function(){
-	console.log("Your ticket to " + allRides[i][0] + " will cost £" + allRides[i][1]);
-			};
+	if (fastRides[0] == pick){
+		var passengerNumber = 0;
+		var fastTicket = fastRides.shift();
+		return function(name){
+			passengerNumber++;
+			console.log("Your fast pass ticket to " + fastTicket + " " + name +"!.\nYou are passenger #" + passengerNumber);
 		}
 	}
-}
+	else{
+		for(var i = 0; i < allRides.length; i++){
+			if(allRides[i][0] == pick){
+				return function(){
+					console.log("Your ticket to " + allRides[i][0] + " will cost £" + allRides[i][1]);
+				};
+			}
+		}
+	}
 }
 
 var ticket = buildTicket(parkRides, fastPassQueue, wantsRide);
