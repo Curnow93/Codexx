@@ -7,7 +7,8 @@ $(document).ready(function(){
 				$('.response').hide().html(response).slideDown('slow');
 			},
 			error: function(response){
-				$('.response').hide().text('Error: content could not be loaded').slideDown('slow');},
+				$('.response').hide().text('Error: content could not be loaded').slideDown('slow');
+			},
 			timeOut: 3000,
 			beforeSend: function(){
 				$('.response').addClass('loading');
@@ -19,7 +20,7 @@ $(document).ready(function(){
 	});
 	$(".ajaxNav").on("click", ".story", function(){
 		alert("story clicked...");
-		$.get("../html/skills.html", function(response){
+		$.get("../html/story.php", function(response){
 			$(".response").hide().html(response).slideDown('slow');
 		});
 	});
@@ -175,7 +176,6 @@ $("button").on("click", function(){
 });*/
 
 //use $.when and $.then to synchronize when ajax is loaded.
-
 
 
 

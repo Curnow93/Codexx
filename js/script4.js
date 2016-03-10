@@ -137,7 +137,7 @@ try{
 list.concat(newHallOfFame);
 }
 catch(error){
-alert("fuck" + error);
+alert("wizard" + error);
 if (error instanceof ReferenceError){
 alert(error + "\n" + "This is a reference error.");
 }

@@ -1,10 +1,10 @@
-console.log((1 == true)*10 + "\n \"Cats\"\/\"Dogs\"".length);
+console.log((1 == true) * 10 + "\n \"Cats\"\/\"Dogs\"".length);
 
-var trainPiss = 4;
+var train = 4;
 
-trainPiss += 4;
-trainPiss *= 10;
-console.log(trainPiss);
+train += 4;
+train *= 10;
+console.log(train);
 
 function makeSquare(a, b, c){
 
@@ -13,8 +13,8 @@ var height = b;
 var depth = c;
 var cube = a * b * c;
 return cube;
-
 }
+
 var cube1 = makeSquare(3, 4, 8);
 var cube2 = makeSquare(3, 3, 3);
 var cube3 = makeSquare(5, 5, 5);
@@ -25,7 +25,7 @@ console.log(cube1, cube2, cube3, cubeSum);
 var toby = "Toby Davies",
 people = ["Gregg Pollock", "John Maher", undefined, "John Doe", "David Beckham", toby, 1];
 
-var criminals = ["Ian Brady", "Myra Hindley"];
+var criminals = ["Ian", "Myra"];
 var badPeople = [people, criminals];
 criminals[0] = undefined;
 
