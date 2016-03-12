@@ -1,5 +1,36 @@
 $(document).ready(function(){
-	alert("jQuery Loaded!");
+	//alert("jQuery Loaded!");
+	var currentIndex = 0;
+	var items = $(".slider div");
+	var itemAmt = items.length;
+	function cycleItems(){
+		var item = $(".slider div").eq(currentIndex);
+		items.hide();
+		item.css("display", "inline-block");
+	}
+	var autoSlide = setInterval(function(){
+		currentIndex += 1;
+		if (currentIndex > itemAmt - 1){
+			currentIndex = 0;
+		}
+		cycleItems();
+	}, 3000);
+	$(".slider > h3:first").on("click", function(){
+		clearInterval(autoSlide);
+		currentIndex -= 1;
+		if(currentIndex < 0){
+			currentIndex = itemAmt -1;
+		}
+		cycleItems();
+	});
+	$(".slider > h3:last").on("click", function(){
+		clearInterval(autoSlide);
+		currentIndex -=1
+		if (currentIndex < 0) {
+			currentIndex = itemAmt -1;
+		}
+		cycleItems();
+	})
 	$(".ajaxNav").on("click", ".skills", function(){
 		alert("skills clicked...");
 		$.ajax("../html/skills.html", {
